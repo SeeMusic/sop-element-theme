@@ -1,0 +1,32 @@
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+// Icon
+[class^="el-icon-"], [class*=" el-icon-"] {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+@import "./color.scss";
+
+@import "./button.scss";
+@import "./icon.scss";
+@import "./carousel.scss";
+@import "./cascader.scss";
+@import "./collapse.scss";
+@import "./radio.scss";
+@import "./checkbox.scss";
+@import "./select.scss";
+@import "./popover.scss";
+@import "./dialog.scss";
+@import "./table.scss";
+@import "./date-picker.scss";
+@import "./input.scss";
+@import "./form.scss";
+@import "./tabs.scss";
+@import "./pager.scss";
+@import "./popconfirm.scss";
+@import "./drawer.scss";
+@import "./tag.scss";
