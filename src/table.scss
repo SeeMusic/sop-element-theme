@@ -1,0 +1,85 @@
+.el-table {
+  color: #333;
+
+  thead {
+    color: #FFF;
+  }
+
+  th,
+  td {
+    padding: 8px 0;
+    vertical-align: top;
+  }
+
+  td {
+    border-bottom: 1px solid #EEE;
+  }
+
+  th {
+    background: #333;
+
+    // 消除 ElementUI原本的设定
+    // .el-table th > .cell { display: inline-block }
+    // 带来的底部空白
+
+    // TODO 嵌套 popover时高度不对
+    &.is-leaf {
+      font-size: 0;
+      font-weight: 400;
+      border-bottom: none;
+    }
+
+    // 2.13.0 加入了 padding-left: 10px ; padding-right: 10px 的默认样式，需要覆盖
+    & > .cell {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  .cell {
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+
+// 空内容
+.el-table__empty-block {
+  min-height: 88px;
+}
+
+.el-table__empty-text {
+  font-size: 24px;
+  color: #999;
+}
+
+// 操作链接色
+.el-table a {
+  color: $blue;
+}
+
+.el-table .opt a {
+  & + a {
+    margin-left: 24px;
+  }
+}
+
+// expand 模式魔改
+.el-table__row .el-table__row--noexpand .el-table__expand-column .cell {
+  display: none;
+}
+
+.el-table__expand-column .el-table__expand-icon {
+  & > .el-icon {
+    font-size: 20px;
+    position: static;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+
+.el-table .el-table__expanded-cell[class*=cell] {
+  padding: 24px;
+}
