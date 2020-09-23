@@ -1,9 +1,9 @@
 {
-  "name": "sop-element-theme",
+  "name": "@seemusic/sop-element-theme",
   "version": "0.0.1",
   "private": false,
   "description": "星球发行 SOP 自定义 ElementUI 皮肤",
-  "author": "cuiguojie@me.com",
+  "author": "cuiguojie@kanjian.com",
   "scripts": {
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6007 -c config/storybook"
