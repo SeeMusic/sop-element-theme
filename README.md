@@ -1,4 +1,4 @@
-# sdp-element-theme
+# sop-element-theme
 
 SOP 系统自定义 ElementUI 样式。仅提供 SCSS 文件及相关资源；使用 `storybook` 做控件样式预览
 
