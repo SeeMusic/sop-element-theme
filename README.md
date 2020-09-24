@@ -20,21 +20,21 @@ npm run storybook:build
 
 - [ ] Button
 - [x] Cascader
-- [ ] Checkbox
-- [ ] CheckboxGroup
+- [x] Checkbox
+- [x] CheckboxGroup
 - [ ] Collapse
 - [ ] CollapseItem
 - [ ] DatePicker
 - [ ] Dialog
 - [ ] Drawer
-- [ ] Form
-- [ ] Input
-- [ ] Pager
+- [x] Form
+- [x] Input
+- [x] Pager
 - [ ] Popconfirm
 - [ ] Popover
 - [x] Radio
 - [x] RadioGroup
-- [ ] Select
+- [x] Select
 - [x] Table
 - [ ] Tabs
-- [ ] Tag
+- [x] Tag
