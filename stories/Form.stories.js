@@ -646,6 +646,7 @@ storiesOf('Form', module)
       return {
         basic: '',
         daterange: '',
+        monthrange: '',
       };
     },
     template: `

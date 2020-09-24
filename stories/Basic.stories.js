@@ -11,14 +11,15 @@ storiesOf('Basic', module)
     () => ({
       template: `
         <div>
-          <h4>基础用法</h4>
-          <ElButton>默认按钮</ElButton>
-          <ElButton type="primary">主按钮</ElButton>
-          <h4>不同尺寸</h4>
-          <ElButton>默认按钮</ElButton>
-          <ElButton type="primary">默认按钮</ElButton>
-          <ElButton size="small">小型 small 按钮</ElButton>
-          <ElButton size="mini">超小 mini 按钮</ElButton>
+          <h4>Type</h4>
+          <ElButton>Default</ElButton>
+          <ElButton type="primary">Primary</ElButton>
+          <h4>Size</h4>
+          <ElButton>Type: Default</ElButton>
+          <ElButton type="primary">Type: Primary</ElButton>
+          <ElButton size="small">Size: small</ElButton>
+          <ElButton size="mini">Size: mini</ElButton>
+          <ElButton type="primary" size="mini">Size: mini</ElButton>
         </div>
       `,
     }),

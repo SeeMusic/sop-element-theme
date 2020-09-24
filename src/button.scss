@@ -3,6 +3,7 @@
   height: 48px;
   line-height: 46px;
   font-size: 18px;
+  font-weight: 400;
   color: $blue;
   border-color: $blue;
   border-radius: 8px;
@@ -30,11 +31,11 @@
   // el-message-box 使用 small，两者样式统一掉
   &--small,
   &--mini {
-    padding: 0 15px;
+    padding: 0 11px;
     height: 32px;
     line-height: 30px;
-    font-size: 14px;
-    border-radius: 6px;
+    font-size: 12px;
+    border-radius: 4px;
   }
 
   & + .el-button {
