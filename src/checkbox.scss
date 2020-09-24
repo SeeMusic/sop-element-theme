@@ -1,14 +1,14 @@
 .el-checkbox {
+  margin-right: 24px;
   color: #333;
   font-weight: 400;
-  font-size: 14px;
 }
 
 .el-checkbox__inner {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-color: #999;
-  border-radius: 4px;
+  border-radius: 3px;
 
   &:after {
     display: none;
@@ -17,6 +17,7 @@
 
 .el-checkbox__label {
   padding-left: 8px;
+  font-size: 12px;
   line-height: inherit;
 }
 
