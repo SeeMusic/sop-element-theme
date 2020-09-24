@@ -18,13 +18,13 @@ npm run storybook:build
 
 ## 组件列表
 
-- [ ] Button
+- [x] Button
 - [x] Cascader
 - [x] Checkbox
 - [x] CheckboxGroup
-- [ ] Collapse
-- [ ] CollapseItem
-- [ ] DatePicker
+- [x] Collapse
+- [x] CollapseItem
+- [x] DatePicker
 - [ ] Dialog
 - [ ] Drawer
 - [x] Form
@@ -36,5 +36,5 @@ npm run storybook:build
 - [x] RadioGroup
 - [x] Select
 - [x] Table
-- [ ] Tabs
+- [x] Tabs
 - [x] Tag
