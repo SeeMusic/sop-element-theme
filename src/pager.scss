@@ -36,7 +36,7 @@
   }
 
   .el-pager li:not(.disabled).active {
-    background: $blue;
+    background: #E6F0FF;
   }
 }
 
@@ -59,16 +59,15 @@
     border-radius: 4px;
 
     &:hover {
-      color: #0040FF;
+      color: $blue;
     }
 
     &.active {
-      font-weight: 600;
-      color: #FFF;
-      background: #0040FF;
+      color: $blue;
+      background: #E6F0FF;
 
       &:hover {
-        color: #FFF;
+        color: $blue;
       }
     }
   }
@@ -107,4 +106,8 @@
   .el-input__inner {
     height: 32px;
   }
+}
+
+.el-table + .el-pagination {
+  margin-top: 16px;
 }

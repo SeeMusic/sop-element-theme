@@ -1,10 +1,10 @@
 .el-tabs__header {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .el-tabs__nav-wrap:after {
   height: 1px;
-  color: #EEE;
+  color: #DDD;
 }
 
 .el-tabs .el-tabs__header .el-tabs__nav {
@@ -14,10 +14,10 @@
 
   .el-tabs__item {
     position: relative;
-    margin-right: 24px;
+    margin-right: 16px;
     padding: 0;
-    height: 48px;
-    line-height: 46px;
+    height: 32px;
+    line-height: 18px;
     font-size: 12px;
     font-weight: 400;
     color: #333;
@@ -33,6 +33,47 @@
         bottom: 0;
         height: 2px;
         background: $blue;
+      }
+    }
+  }
+}
+
+.el-tabs.outter > .el-tabs__header .el-tabs__nav {
+  .el-tabs__active-bar {
+    display: none;
+  }
+
+  .el-tabs__item {
+    position: relative;
+    margin-right: 8px;
+    padding: 0 8px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    border: 1px solid #DDD;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #EEE;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: #DDD;
+    }
+
+    &.is-active {
+      color: $blue;
+      background: #FAFAFA;
+
+      &:after {
+        background: transparent;
       }
     }
   }

@@ -4,21 +4,24 @@
   color: #333;
   border-color: #DDD;
 
+  &:hover {
+    border-color: $hover;
+  }
+
   &:focus {
     border-color: $blue;
   }
 }
 
 .el-input__inner {
-  padding: 0 8px;
+  padding: 0 7px;
   height: 32px;
   line-height: 32px;
 }
 
 .el-textarea__inner {
-  padding: 3px 8px;
-  height: 80px;
-  line-height: 24px;
+  padding: 6px 7px;
+  height: 72px;
 }
 
 .el-input__suffix {
@@ -40,5 +43,5 @@
 .el-input.is-disabled .el-input__inner {
   background-color: #EEE;
   border-color: #DDD;
-  color: #333;
+  color: #CCC;
 }

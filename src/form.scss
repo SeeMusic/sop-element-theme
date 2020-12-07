@@ -46,18 +46,19 @@
 
 .el-form-item__label,
 .el-form-item__content {
-  line-height: 24px;
+  line-height: 18px;
 }
 
 .el-form-item__label {
   padding: 6px 32px 6px 0;
   color: #333;
   font-weight: 600;
+  font-size: 12px;
 }
 
 .el-form--label-top {
   .el-form-item__label {
-    padding-bottom: 8px;
+    padding-bottom: 4px;
   }
 
   textarea {

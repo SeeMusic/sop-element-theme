@@ -1,29 +1,52 @@
+// TODO size 规划，需要看设计最终方案。
+
 .el-button {
   padding: 0 31px; // 设计是 32，但是button 元素即使设置 border-box 宽度计算也是标准盒模型
   height: 48px;
   line-height: 46px;
   font-size: 18px;
   font-weight: 400;
-  color: $blue;
-  border-color: $blue;
-  border-radius: 8px;
+  border-radius: 4px;
 
-  &:hover,
-  &:focus {
-    color: $blue;
-    background: none;
-    border-color: $blue;
+  &--default {
+    // 必须覆写 focus 和常规状态一致，否则 button 点击后不会失去 focus 状态
+    &,
+    &:focus {
+      color: #333;
+      border-color: #999;
+      background: none;
+    }
+
+    &:hover {
+      color: $hover;
+      border-color: $hover;
+      background: none;
+    }
+
+    &:active {
+      color: $blue;
+      border-color: $blue;
+    }
   }
 
   &--primary {
-    background: $blue;
-    color: #FFF;
-
-    &:hover,
+    &,
     &:focus {
-      color: #FFF;
       background: $blue;
       border-color: $blue;
+      color: #FFF;
+    }
+
+    &:hover {
+      color: #FFF;
+      border-color: $hover;
+      background: $hover;
+    }
+
+    &:active {
+      background: $blue;
+      border-color: $blue;
+      color: #FFF;
     }
   }
 
@@ -35,11 +58,10 @@
     height: 32px;
     line-height: 30px;
     font-size: 12px;
-    border-radius: 4px;
   }
 
   & + .el-button {
-    margin-left: 16px;
+    margin-left: 8px;
   }
 }
 

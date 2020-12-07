@@ -7,7 +7,7 @@
 
   th,
   td {
-    padding: 8px 0;
+    padding: 7px 0;
     vertical-align: top;
   }
 
@@ -24,7 +24,7 @@
 
     // TODO 嵌套 popover时高度不对
     &.is-leaf {
-      font-size: 0;
+      font-size: 0; // 移除 3px 空白，字号定义在内部 .cell 上
       font-weight: 400;
       border-bottom: none;
     }
@@ -33,6 +33,7 @@
     & > .cell {
       padding-left: 12px;
       padding-right: 12px;
+      font-weight: 600;
     }
   }
 
@@ -46,12 +47,12 @@
 
 // 空内容
 .el-table__empty-block {
-  min-height: 88px;
+  padding: 24px 0;
+  min-height: auto;
 }
 
 .el-table__empty-text {
-  font-size: 18px;
-  color: #999;
+  line-height: 1.5;
 }
 
 // 操作链接色
