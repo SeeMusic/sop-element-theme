@@ -48,6 +48,13 @@
       border-color: $blue;
       color: #FFF;
     }
+
+    &.is-disabled,
+    &.is-disabled:hover {
+      background: #EEE;
+      border-color: #EEE;
+      color: #CCC;
+    }
   }
 
   // el-popconfirm 使用 mini

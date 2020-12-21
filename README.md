@@ -26,7 +26,7 @@ npm run storybook:build
 - [x] CollapseItem
 - [x] DatePicker
 - [ ] Dialog
-- [ ] Drawer
+- [x] Drawer
 - [x] Form
 - [x] Input
 - [x] Pager

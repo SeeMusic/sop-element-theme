@@ -1,5 +1,4 @@
 .el-tag {
-  margin-right: 8px;
   margin-bottom: 8px;
   padding: 0 8px;
   background: rgba(0, 64, 255, .04);
@@ -7,21 +6,36 @@
   color: #333;
   font-size: 12px;
 
+  & + .el-tag {
+    margin-left: 8px;
+  }
+
+  // TODO 普通尺寸定义，此处全是小尺寸
   .el-tag__close {
-    right: -4px;
-    font-family: "sd-icon" !important;
+    margin: 0 -4px 0 4px;
+    padding: 1px;
+    top: 0; // 重置自带的 position
+    right: 0; // 重置自带的 position
+    font-family: "sop-icon" !important;
     font-size: 16px;
-    color: $blue;
-    background: none;
+    color: #FFF;
+    background: #A3C6FF;
     border-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transform: none;
+    vertical-align: unset;
 
     &:before {
-      content: '\e616';
+      content: '\e60a';
     }
 
     &:hover {
-      color: $blue;
-      background: none;
+      background: $hover;
+    }
+
+    &:active {
+      background: $active;
     }
   }
 
@@ -60,11 +74,14 @@
 
 .el-tag--mini {
   margin-bottom: 4px;
-  margin-right: 4px;
   padding: 0 4px;
   height: 18px;
   line-height: 1.5;
   background: #E6F0FF;
   border-radius: 2px;
   border: 0;
+
+  & + .el-tag--mini {
+    margin-left: 4px;
+  }
 }

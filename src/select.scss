@@ -12,7 +12,7 @@
 
   .el-input .el-select__caret {
     color: #333;
-    font-family: "sd-icon" !important;
+    font-family: "sop-icon" !important;
     font-size: 24px;
     transform: rotate(0);
 
@@ -21,7 +21,7 @@
     }
 
     &.el-icon-arrow-up:before {
-      content: '\e601';
+      content: '\e608';
     }
   }
 }

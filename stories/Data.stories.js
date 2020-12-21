@@ -195,6 +195,7 @@ storiesOf('Data', module)
             v-for="(item, index) in list"
             :key="index"
             closable
+            size="mini"
             @close="removeItem(index)"
           >
             {{ item.name }}

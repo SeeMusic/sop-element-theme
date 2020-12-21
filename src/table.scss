@@ -55,11 +55,6 @@
   line-height: 1.5;
 }
 
-// 操作链接色
-.el-table a {
-  color: $blue;
-}
-
 .el-table .opt a {
   & + a {
     margin-left: 24px;

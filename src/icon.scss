@@ -1,7 +1,17 @@
-.el-icon-caret-bottom {
-  font-family: "sd-icon" !important;
+// 逐步替换，覆盖全部常用场景后可以使用前缀选择符
+.el-icon-caret-bottom,
+.el-icon-search {
+  font-family: "sop-icon" !important;
+}
 
+.el-icon-caret-bottom {
   &:before {
-    content: '\e601';
+    content: '\e608';
+  }
+}
+
+.el-icon-search {
+  &:before {
+    content: '\e604';
   }
 }
