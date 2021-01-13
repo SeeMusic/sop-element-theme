@@ -79,3 +79,30 @@
 .el-table .el-table__expanded-cell[class*=cell] {
   padding: 24px;
 }
+
+.el-table--enable-row-hover .el-table__body tr {
+  &,
+  &:hover,
+  &.expanded + tr {
+    & > td {
+      background: #FFF;
+    }
+
+    .el-table__expanded-cell {
+      background: #FFF!important;
+    }
+  }
+
+  &.el-table__row--striped {
+    &,
+    &.expanded + tr {
+      & > td {
+        background: #FAFAFA;
+      }
+
+      .el-table__expanded-cell {
+        background: #FAFAFA!important;
+      }
+    }
+  }
+}
