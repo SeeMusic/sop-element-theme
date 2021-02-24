@@ -1,12 +1,13 @@
 // TODO size 规划，需要看设计最终方案。
 
 .el-button {
-  padding: 0 31px; // 设计是 32，但是button 元素即使设置 border-box 宽度计算也是标准盒模型
-  height: 48px;
-  line-height: 46px;
-  font-size: 18px;
+  padding: 0 11px; // 设计是 32，但是button 元素即使设置 border-box 宽度计算也是标准盒模型
+  height: 32px;
+  line-height: 30px;
+  font-size: 12px;
   font-weight: 400;
   border-radius: 4px;
+  // 默认样式有 border: 1px solid #DCDFE6，不再重新定义边框通用样式
 
   &--default {
     // 必须覆写 focus 和常规状态一致，否则 button 点击后不会失去 focus 状态
@@ -26,6 +27,12 @@
     &:active {
       color: $blue;
       border-color: $blue;
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover {
+      border-color: #DDD;
+      color: $disabled;
     }
   }
 
@@ -53,7 +60,7 @@
     &.is-disabled:hover {
       background: #EEE;
       border-color: #EEE;
-      color: #CCC;
+      color: $disabled;
     }
   }
 
@@ -61,10 +68,9 @@
   // el-message-box 使用 small，两者样式统一掉
   &--small,
   &--mini {
-    padding: 0 11px;
-    height: 32px;
-    line-height: 30px;
-    font-size: 12px;
+    padding: 0 7px;
+    height: 24px;
+    line-height: 22px;
   }
 
   & + .el-button {

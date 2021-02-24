@@ -31,7 +31,7 @@
     background: none;
 
     &:disabled {
-      color: #CCC;
+      color: $disabled;
     }
   }
 

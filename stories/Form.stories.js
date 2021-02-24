@@ -66,24 +66,26 @@ storiesOf('Form', module)
         </ElFormItem>
 
         <ElFormItem label="禁用状态">
-          <ElRadio
-            :label="1"
+          <ElRadioGroup
+            v-model="isChecked"
             disabled
           >
-            唱片公司或厂牌
-          </ElRadio>
-          <ElRadio
-            :label="2"
-            disabled
-          >
-            个人工作室
-          </ElRadio>
-          <ElRadio
-            :label="3"
-            disabled
-          >
-            版权代理机构
-          </ElRadio>
+            <ElRadio
+              :label="1"
+            >
+              唱片公司或厂牌
+            </ElRadio>
+            <ElRadio
+              :label="2"
+            >
+              个人工作室
+            </ElRadio>
+            <ElRadio
+              :label="3"
+            >
+              版权代理机构
+            </ElRadio>
+          </ElRadioGroup
         </ElFormItem>
 
         <ElFormItem label="按钮样式">
@@ -271,6 +273,18 @@ storiesOf('Form', module)
             <template slot="prepend">Https://</template>
           </ElInput>
         </ElFormItem>
+
+        <ElFormItem label="复合输入框 - 加入 sop-icon">
+          <ElInput
+            placeholder="请输入内容"
+            v-model="prepend"
+          >
+            <template slot="prepend">
+              <i class="sop-icon sop-icon--cd" />
+            </template>
+          </ElInput>
+        </ElFormItem>
+
       </ElForm>
     `,
   }))

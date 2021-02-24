@@ -35,9 +35,23 @@
         background: $blue;
       }
     }
+
+    &:hover {
+      color: $hover;
+    }
+
+    &.is-disabled {
+      color: $disabled;
+      cursor: not-allowed;
+
+      &:hover {
+        color: $disabled;
+      }
+    }
   }
 }
 
+// 自定义 tab， class="outter"
 .el-tabs.outter > .el-tabs__header .el-tabs__nav {
   .el-tabs__active-bar {
     display: none;
@@ -49,9 +63,7 @@
     padding: 0 8px;
     height: 32px;
     line-height: 32px;
-    font-size: 12px;
     font-weight: 400;
-    color: #333;
     border: 1px solid #DDD;
     border-bottom: none;
     border-top-left-radius: 4px;
@@ -75,6 +87,14 @@
       &:after {
         background: transparent;
       }
+    }
+
+    &:hover {
+      color: $hover;
+    }
+
+    &.is-disabled:hover {
+      color: $disabled;
     }
   }
 }
