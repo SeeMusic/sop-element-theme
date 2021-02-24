@@ -191,15 +191,26 @@ storiesOf('Data', module)
       },
       template: `
         <div>
-          <ElTag
-            v-for="(item, index) in list"
-            :key="index"
-            closable
-            size="mini"
-            @close="removeItem(index)"
-          >
-            {{ item.name }}
-          </ElTag>
+          <div>
+            <ElTag
+              v-for="(item, index) in list"
+              :key="index"
+              size="mini"
+              closable
+              @close="removeItem(index)"
+            >
+              {{ item.name }}
+            </ElTag>
+          </div>
+          <div>
+            <ElTag
+              v-for="(item, index) in list"
+              :key="index"
+              size="mini"
+            >
+              {{ item.name }}
+            </ElTag>
+          </div>
         </div>
       `,
     }),

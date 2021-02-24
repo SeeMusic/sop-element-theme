@@ -13,28 +13,54 @@ storiesOf('Navigation', module)
         activeTab: 'first',
       };
     },
-    template: `
+    template: `<div>
       <ElTabs
         v-model="activeTab"
+        class="outter"
       >
         <ElTabPane
           name="first"
-          label="待审核"
+          label="常规 1"
         >
           第一个标签页
         </ElTabPane>
         <ElTabPane
           name="second"
-          label="审核未通过"
+          label="常规 2"
         >
           第二个标签页
         </ElTabPane>
         <ElTabPane
           name="third"
-          label="审核已通过"
+          label="禁用"
+          disabled
         >
           第三个标签页
         </ElTabPane>
       </ElTabs>
-    `,
+      <br><br>
+      <ElTabs
+        v-model="activeTab"
+      >
+        <ElTabPane
+          name="first"
+          label="常规 1"
+        >
+          第一个标签页
+        </ElTabPane>
+        <ElTabPane
+          name="second"
+          label="常规 2"
+        >
+          第二个标签页
+        </ElTabPane>
+        <ElTabPane
+          name="third"
+          label="禁用"
+          disabled
+        >
+          第三个标签页
+        </ElTabPane>
+      </ElTabs>
+    </div>`,
   }));

@@ -1,7 +1,7 @@
 .el-input__inner,
 .el-textarea__inner {
   font-size: 12px;
-  color: #333;
+  color: $normal;
   border-color: #DDD;
 
   &:hover {
@@ -34,14 +34,20 @@
 }
 
 .el-input-group__prepend {
-  padding: 0 8px;
+  padding: 0 4px;
   color: #CCC;
   border-color: #DDD;
-  background: #FAFAFA;
+  background: #EEE;
+
+  .sop-icon {
+    font-size: 24px;
+    color: $normal;
+    vertical-align: middle;
+  }
 }
 
 .el-input.is-disabled .el-input__inner {
   background-color: #EEE;
   border-color: #DDD;
-  color: #CCC;
+  color: $normal;
 }

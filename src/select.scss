@@ -1,9 +1,20 @@
 .el-select {
-  &:hover,
-  .el-input.is-focus {
-    .el-input__inner {
-      border-color: #DDD;
+  .el-input {
+    &.is-focus {
+      .el-input__inner {
+        border-color: #DDD;
+      }
     }
+
+    &.is-disabled {
+      .el-select__caret {
+        color: $disabled;
+      }
+    }
+  }
+
+  &:hover .el-input__inner {
+    border-color: $hover;
   }
 
   .el-input__inner:focus {
