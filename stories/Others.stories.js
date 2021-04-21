@@ -43,6 +43,7 @@ storiesOf('Others', module)
           <ElPopconfirm
             title="确认重置？"
             placement="bottom-start"
+            cancel-button-type="reset"
             :visible-arrow="false"
             :hide-icon="true"
             :width="256"
@@ -57,7 +58,7 @@ storiesOf('Others', module)
       `,
     }),
     {
-      notes: '',
+      notes: '注：按钮自带 size 为 `el-button--mini` 且没有接口自定义，此处在样式中直接覆写。<br> 另外，最小宽度继承的 ElPopopver 的 150，如果需要自定义，则使用 ElPopover 的 `width` 属性',
     })
   .add('Collapse',
     () => ({

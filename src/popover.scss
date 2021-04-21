@@ -1,8 +1,9 @@
 .el-popover {
   padding: 8px 0;
   min-width: 88px;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.08);
+  font-size: 12px;
   border-radius: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .16), 0 24px 48px 0 rgba(0, 0, 0, .24);
 }
 
 .el-popper[x-placement^="bottom"] {
