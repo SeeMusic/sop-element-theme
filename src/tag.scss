@@ -11,59 +11,50 @@
   }
 
   // TODO 普通尺寸定义，此处全是小尺寸
-  .el-tag__close {
-    margin: 0 -4px 0 4px;
-    padding: 1px;
-    top: 0; // 重置自带的 position
-    right: 0; // 重置自带的 position
-    font-family: "sop-icon" !important;
-    font-size: 16px;
-    color: #FFF;
-    background: #A3C6FF;
-    border-radius: 0;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    transform: none;
-    vertical-align: unset;
+  &,
+  &.el-tag--info {
+    .el-tag__close {
+      margin: 0 -4px 0 4px;
+      top: -1px; // 重置自带的 position
+      right: 0; // 重置自带的 position
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      font-family: "sop-icon" !important;
+      font-size: 16px;
+      color: #FFF;
+      background: #A3C6FF;
+      border-radius: 0;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      transform: none;
+      vertical-align: middle;
 
-    &:before {
-      content: '\e60a';
-    }
+      &:before {
+        content: '\e60a';
+      }
 
-    &:hover {
-      background: $hover;
-    }
+      &:hover {
+        background: $hover;
+      }
 
-    &:active {
-      background: $active;
+      &:active {
+        background: $active;
+      }
     }
   }
 
   // 目前仅在 ElSelect 的 collapse-tags 模式见到
+  // 原生的 ElSelect 的 ElTag size 设定为 small，且无法传参，这里需要强制覆写
   &.el-tag--info {
     margin: 0 0 0 4px;
     padding: 0 4px;
-    background: rgba(0, 64, 255, .04);
-    border-color: #DDD;
+    height: 18px;
+    line-height: 18px;
+    background: #E6F0FF;
+    border: 0;
     color: #333;
-
-    .el-tag__close {
-      right: -4px;
-      font-family: "sd-icon" !important;
-      font-size: 16px;
-      color: $blue;
-      background: none;
-      border-radius: 0;
-
-      &:before {
-        content: '\e616';
-      }
-
-      &:hover {
-        color: $blue;
-        background: none;
-      }
-    }
+    border-radius: 2px;
   }
 }
 
@@ -74,9 +65,9 @@
 
 .el-tag--mini {
   margin-bottom: 4px;
-  padding: 0 4px;
+  padding: 1px 4px;
   height: 18px;
-  line-height: 18px;
+  line-height: 16px;
   background: #E6F0FF;
   border-radius: 2px;
   border: 0;
@@ -84,4 +75,17 @@
   & + .el-tag--mini {
     margin-left: 4px;
   }
+}
+
+// 和多选模式的 select 联动
+.el-select .el-tag__close.el-icon-close {
+  right: 0;
+}
+
+.el-select__tags-text {
+  vertical-align: top;
+}
+
+.el-select .el-tag__close.el-icon-close::before {
+  transform: none;
 }
