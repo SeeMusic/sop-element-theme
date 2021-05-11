@@ -7,7 +7,7 @@ import '@/index.scss';
 const req = require.context('../../stories', true, /.stories.js$/);
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);
