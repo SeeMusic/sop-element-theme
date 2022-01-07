@@ -238,3 +238,42 @@
     color: #CCC;
   }
 }
+
+.el-month-table {
+  margin-top: 16px;
+}
+
+.el-month-table td {
+  padding: 0;
+
+  div {
+    padding: 0;
+    height: 32px;
+  }
+
+  .cell {
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 0;
+  }
+
+  &.start-date,
+  &.end-date {
+    div {
+      border-radius: 0;
+    }
+
+    .cell {
+      background: $blue;
+    }
+  }
+
+  &.today .cell {
+    color: $blue;
+  }
+
+  &.in-range div {
+    background: rgba(0, 64, 255, 0.08);
+  }
+}

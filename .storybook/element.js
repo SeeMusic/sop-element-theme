@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import Vue from 'vue';
 import {
   Aside,
@@ -6,6 +5,7 @@ import {
   BreadcrumbItem,
   Button,
   Cascader,
+  CascaderPanel,
   Col,
   Collapse,
   CollapseItem,
@@ -48,6 +48,7 @@ Vue.use(Breadcrumb);
 Vue.use(BreadcrumbItem);
 Vue.use(Button);
 Vue.use(Cascader);
+Vue.use(CascaderPanel);
 Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
 Vue.use(Col);
@@ -83,9 +84,6 @@ Vue.use(Upload);
 
 Vue.use(Loading.directive);
 
-// 不可以同时使用Vue.user(Message) 和 Vue.prototype.$message = Message
-// 否则会多次初始化，在调试工具里的表现是多个Root
-// 同理还有MessageBox
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

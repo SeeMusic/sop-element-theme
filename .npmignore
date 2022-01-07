@@ -1,0 +1,17 @@
+# storybook
+.storybook
+stories
+/storybook-static
+
+#vue template
+public
+
+#project config
+.nvmrc
+babel.config.js
+.editorconfig
+.browserslistrc
+.eslintrc.js
+commitlint.config.js
+
+*.tgz

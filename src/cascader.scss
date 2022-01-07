@@ -10,7 +10,7 @@
 
   .el-input .el-icon-arrow-down {
     color: #333;
-    font-family: "sd-icon" !important;
+    font-family: "sop-icon" !important;
     font-size: 24px;
     transform: rotate(0);
 
@@ -19,7 +19,7 @@
     }
 
     &:before {
-      content: '\e601';
+      content: '\e608';
     }
   }
 }
@@ -44,30 +44,31 @@
 }
 
 .el-cascader-node {
-  margin: 8px 0;
-  padding: 0 32px 0 16px;
+  // margin: 8px 0;
+  padding: 4px 32px 4px 16px;
   height: 24px;
   line-height: 24px;
 
-  &:not(.is-disabled):hover,
-  &:not(.is-disabled):focus {
-    background: none;
-  }
+  // &:not(.is-disabled):hover,
+  // &:not(.is-disabled):focus {
+  //   background: none;
+  // }
 
   .el-icon-arrow-right {
     right: 8px;
     color: #DDD;
-    font-family: "sd-icon" !important;
+    font-family: "sop-icon" !important;
     font-size: 24px;
     transform: rotate(-90deg);
 
     &:before {
-      content: '\e601';
+      content: '\e608';
     }
   }
 
   &.in-active-path,
-  &.is-active {
+  &.is-active,
+  &.is-selectable.in-checked-path {
     font-weight: 400;
     color: $blue;
 
@@ -75,11 +76,29 @@
       color: $blue;
     }
   }
+
+  // panel
+  // &.is-selectable {
+  //   .el-cascader-node__label {
+  //     padding-left: 8px;
+  //   }
+  // }
+
+  .el-checkbox,
+  .el-radio {
+    & + .el-cascader-node__label {
+      padding-left: 8px;
+    }
+  }
 }
 
 .el-cascader-menu:last-child .el-cascader-node {
   padding-left: 40px;
   padding-right: 16px;
+
+  &.is-selectable {
+    padding-left: 16px;
+  }
 }
 
 // 必须 first-child 覆写
@@ -92,6 +111,10 @@
   padding-left: 0;
 }
 
+// 多选时 checkbox 和 label 距离
+// .el-checkbox + .el-cascader-node__label {
+//   padding-left: 8px;
+// }
 
 .el-cascader-node__prefix {
   left: 16px;

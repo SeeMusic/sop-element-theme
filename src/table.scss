@@ -1,21 +1,37 @@
+// Element 2.15.6 修改了 Table 的 DOM 结构和样式选择器，导致样式出错。
+// 为了兼容老版本，此处采用冗余选择器的方法。
+
 .el-table {
   color: #333;
+
+  .cell {
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 1.5;
+    font-size: 12px;
+  }
 
   thead {
     color: #FFF;
   }
 
   th,
-  td {
+  td,
+  .el-table__cell {
     padding: 7px 0;
     vertical-align: top;
   }
 
-  td {
+  th.is-leaf,
+  td,
+  th.el-table__cell.is-leaf,
+  td.el-table__cell {
+    // 2.15.2 修改 DOM 结构，使用后两行
     border-bottom: 1px solid #EEE;
   }
 
-  th {
+  th,
+  th.el-table__cell {
     background: #333;
 
     // 消除 ElementUI原本的设定
@@ -35,13 +51,6 @@
       padding-right: 12px;
       font-weight: 600;
     }
-  }
-
-  .cell {
-    padding-left: 12px;
-    padding-right: 12px;
-    line-height: 1.5;
-    font-size: 12px;
   }
 }
 
